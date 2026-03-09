@@ -216,23 +216,25 @@
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
         }
 
-        /* Mobile optimizations for Google Sites embed */
+        /* Mobile optimizations */
         @media (max-width: 640px) {
             body {
                 padding: 1rem 1rem;
             }
 
             .brand-header {
-                margin-bottom: 1.5rem;
+                margin-bottom: 2rem;
             }
 
-            /* Hide redundant title on mobile (Google Sites bar shows AVANT) */
             .brand-title {
-                display: none;
+                font-size: 2.5rem;
+                letter-spacing: 0.12em;
+                margin-bottom: 0.5rem;
             }
 
             .brand-tagline {
-                font-size: 9px;
+                font-size: 8px;
+                letter-spacing: 0.15em;
             }
 
             .links-container {
@@ -249,12 +251,6 @@
 
             footer {
                 margin-top: 2rem !important;
-            }
-        }
-
-        @media (min-width: 641px) {
-            .brand-title {
-                display: block;
             }
         }
     </style>
