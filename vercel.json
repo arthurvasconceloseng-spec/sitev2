@@ -33,8 +33,12 @@
       "destination": "/links.html"
     },
     {
-      "source": "/(.*)",
+      "source": "/landing",
       "destination": "/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/links.html"
     }
   ]
 }
