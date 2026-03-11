@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVANT Engenharia | Diagnóstica &amp; Mapeamento</title>
+    <meta name="description"
+        content="AVANT Engenharia Diagnóstica &amp; Mapeamento. Soluções de engenharia com precisão e tecnologia.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.avant.eng.br/landing">
+    <meta name="theme-color" content="#09090B">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.avant.eng.br/landing">
+    <meta property="og:title" content="AVANT Engenharia | Diagnóstica &amp; Mapeamento">
+    <meta property="og:description"
+        content="AVANT Engenharia Diagnóstica &amp; Mapeamento. Soluções de engenharia com precisão e tecnologia.">
+    <meta property="og:site_name" content="AVANT Engenharia">
+
+
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Michroma&display=swap"
+        rel="stylesheet">
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #09090B;
+            color: #fafafa;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100dvh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Noise overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            opacity: 0.04;
+            pointer-events: none;
+            z-index: 100;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        }
+
+        /* Subtle radial glow */
+        .glow {
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(120, 120, 140, 0.08) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .brand {
+            font-family: 'Michroma', sans-serif;
+            font-size: clamp(3rem, 14vw, 10rem);
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            line-height: 1;
+            color: #fafafa;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s forwards;
+        }
+
+        .subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(0.75rem, 2.5vw, 1.4rem);
+            font-weight: 300;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: rgba(250, 250, 250, 0.65);
+            margin-top: 0.8rem;
+            opacity: 0;
+            transform: translateY(25px);
+            animation: fadeUp 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s forwards;
+        }
+
+        .status {
+            font-size: clamp(0.85rem, 2vw, 1.1rem);
+            font-weight: 300;
+            color: rgba(250, 250, 250, 0.55);
+            letter-spacing: 0.15em;
+            text-transform: lowercase;
+            margin-top: 1.5rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s forwards;
+        }
+
+        .redirect-hint {
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: rgba(250, 250, 250, 0.25);
+            margin-top: 3rem;
+            opacity: 0;
+            animation: fadeUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.2s forwards;
+        }
+
+        .redirect-hint a {
+            color: rgba(250, 250, 250, 0.4);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(250, 250, 250, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .redirect-hint a:hover {
+            color: rgba(250, 250, 250, 0.7);
+            border-bottom-color: rgba(250, 250, 250, 0.4);
+        }
+
+        /* Pulsing dot */
+        .dot {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: rgba(250, 250, 250, 0.4);
+            border-radius: 50%;
+            margin-right: 8px;
+            vertical-align: middle;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 0.3;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="glow"></div>
+
+    <div class="container">
+        <h1 class="brand">AVANT</h1>
+        <p class="subtitle">Site em construção</p>
+        <p class="status"><span class="dot"></span>Engenharia Diagnóstica &amp; Mapeamento</p>
+        <p class="redirect-hint"><a href="/">← Voltar para links</a></p>
+    </div>
+</body>
+
+</html>

@@ -29,16 +29,8 @@
   ],
   "rewrites": [
     {
-      "source": "/links",
-      "destination": "/links.html"
-    },
-    {
       "source": "/landing",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/links.html"
+      "destination": "/landing.html"
     }
   ]
 }

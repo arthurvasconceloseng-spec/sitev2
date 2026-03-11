@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AVANT Engenharia | Diagnóstica &amp; Mapeamento</title>
+    <title>AVANT Engenharia | Links Oficiais</title>
     <meta name="description"
-        content="AVANT Engenharia Diagnóstica &amp; Mapeamento. Soluções de engenharia com precisão e tecnologia.">
+        content="Links oficiais da AVANT Engenharia Diagnóstica & Mapeamento. WhatsApp, Instagram, E-mail e mais.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.avant.eng.br/landing">
+    <link rel="canonical" href="https://www.avant.eng.br/">
     <meta name="theme-color" content="#09090B">
 
     <!-- Favicon -->
@@ -20,171 +20,372 @@
 
     <!-- Open Graph / Social Sharing -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.avant.eng.br/landing">
-    <meta property="og:title" content="AVANT Engenharia | Diagnóstica &amp; Mapeamento">
+    <meta property="og:url" content="https://www.avant.eng.br/">
+    <meta property="og:title" content="AVANT Engenharia | Links Oficiais">
     <meta property="og:description"
-        content="AVANT Engenharia Diagnóstica &amp; Mapeamento. Soluções de engenharia com precisão e tecnologia.">
+        content="Links oficiais da AVANT Engenharia Diagnóstica & Mapeamento. WhatsApp, Instagram, E-mail e mais.">
     <meta property="og:site_name" content="AVANT Engenharia">
-
-
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Michroma&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Michroma&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
         rel="stylesheet">
 
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        brand: ['Michroma', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(24px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { opacity: '0.4' },
+                            '50%': { opacity: '0.8' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-8px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+
     <style>
-        *,
-        *::before,
-        *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background: #09090B;
-            color: #fafafa;
-            font-family: 'Inter', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100dvh;
-            overflow: hidden;
-            position: relative;
-        }
-
-        /* Noise overlay */
+        /* Noise texture overlay */
         body::before {
-            content: '';
+            content: "";
             position: fixed;
             inset: 0;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)"/></svg>');
             opacity: 0.04;
             pointer-events: none;
-            z-index: 100;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            z-index: 9999;
         }
 
-        /* Subtle radial glow */
-        .glow {
-            position: fixed;
-            width: 600px;
-            height: 600px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(120, 120, 140, 0.08) 0%, transparent 70%);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            pointer-events: none;
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #09090B;
+            color: #FAFAFA;
         }
 
-        .container {
-            text-align: center;
+        /* Staggered animation delays */
+        .delay-100 {
+            animation-delay: 100ms;
+        }
+
+        .delay-200 {
+            animation-delay: 200ms;
+        }
+
+        .delay-300 {
+            animation-delay: 300ms;
+        }
+
+        .delay-400 {
+            animation-delay: 400ms;
+        }
+
+        .delay-500 {
+            animation-delay: 500ms;
+        }
+
+        .delay-600 {
+            animation-delay: 600ms;
+        }
+
+        .delay-700 {
+            animation-delay: 700ms;
+        }
+
+        /* Link card interactions */
+        .link-card {
+            transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .link-card:hover {
+            transform: scale(1.03) translateY(-3px);
+            border-color: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05);
+        }
+
+        .link-card:active {
+            transform: scale(0.98);
+        }
+
+        /* Accent glow on hover for icon containers */
+        .icon-box {
+            transition: all 0.35s ease;
+        }
+
+        .link-card:hover .icon-box {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Gradient border effect */
+        .gradient-border {
             position: relative;
-            z-index: 10;
         }
 
-        .brand {
-            font-family: 'Michroma', sans-serif;
-            font-size: clamp(3rem, 14vw, 10rem);
-            font-weight: 400;
-            letter-spacing: 0.05em;
-            line-height: 1;
-            color: #fafafa;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s forwards;
+        .gradient-border::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 9999px;
+            padding: 1.5px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.02));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
         }
 
-        .subtitle {
-            font-family: 'Inter', sans-serif;
-            font-size: clamp(0.75rem, 2.5vw, 1.4rem);
-            font-weight: 300;
-            letter-spacing: 0.35em;
+        /* Badge "em breve" */
+        .badge-soon {
+            background: linear-gradient(135deg, #27272A, #18181B);
+            border: 1px solid #3F3F46;
+            color: #A1A1AA;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 9px;
             text-transform: uppercase;
-            color: rgba(250, 250, 250, 0.65);
-            margin-top: 0.8rem;
-            opacity: 0;
-            transform: translateY(25px);
-            animation: fadeUp 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s forwards;
+            letter-spacing: 0.1em;
+            padding: 3px 10px;
+            border-radius: 9999px;
         }
 
-        .status {
-            font-size: clamp(0.85rem, 2vw, 1.1rem);
-            font-weight: 300;
-            color: rgba(250, 250, 250, 0.55);
-            letter-spacing: 0.15em;
-            text-transform: lowercase;
-            margin-top: 1.5rem;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s forwards;
+        /* WhatsApp green accent */
+        .whatsapp-accent {
+            background: linear-gradient(135deg, #22C55E, #16A34A);
         }
 
-        .redirect-hint {
-            font-size: 0.75rem;
-            font-weight: 400;
-            color: rgba(250, 250, 250, 0.25);
-            margin-top: 3rem;
-            opacity: 0;
-            animation: fadeUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.2s forwards;
+        .link-card:hover .whatsapp-accent {
+            box-shadow: 0 0 24px rgba(34, 197, 94, 0.3);
         }
 
-        .redirect-hint a {
-            color: rgba(250, 250, 250, 0.4);
-            text-decoration: none;
-            border-bottom: 1px solid rgba(250, 250, 250, 0.15);
-            transition: all 0.3s ease;
+        /* Instagram gradient accent */
+        .instagram-accent {
+            background: linear-gradient(135deg, #E1306C, #F77737, #FCAF45);
         }
 
-        .redirect-hint a:hover {
-            color: rgba(250, 250, 250, 0.7);
-            border-bottom-color: rgba(250, 250, 250, 0.4);
+        .link-card:hover .instagram-accent {
+            box-shadow: 0 0 24px rgba(225, 48, 108, 0.3);
         }
 
-        /* Pulsing dot */
-        .dot {
-            display: inline-block;
-            width: 6px;
-            height: 6px;
-            background: rgba(250, 250, 250, 0.4);
-            border-radius: 50%;
-            margin-right: 8px;
-            vertical-align: middle;
-            animation: pulse 2s ease-in-out infinite;
+        /* Email accent */
+        .email-accent {
+            background: linear-gradient(135deg, #3B82F6, #6366F1);
         }
 
-        @keyframes fadeUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .link-card:hover .email-accent {
+            box-shadow: 0 0 24px rgba(59, 130, 246, 0.3);
         }
 
-        @keyframes pulse {
+        /* Website accent */
+        .website-accent {
+            background: linear-gradient(135deg, #FAFAFA, #D4D4D8);
+            color: #09090B;
+        }
 
-            0%,
-            100% {
-                opacity: 0.3;
+        /* Divider */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+        }
+
+        /* Mobile optimizations */
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem 1rem;
             }
 
-            50% {
-                opacity: 1;
+            .brand-header {
+                margin-bottom: 2rem;
+            }
+
+            .brand-title {
+                font-size: 2.5rem;
+                letter-spacing: 0.12em;
+                margin-bottom: 0.5rem;
+            }
+
+            .brand-tagline {
+                font-size: 8px;
+                letter-spacing: 0.15em;
+            }
+
+            .links-container {
+                gap: 0.65rem;
+            }
+
+            .link-card {
+                padding: 0.85rem 1rem;
+            }
+
+            .link-card:hover {
+                transform: none;
+            }
+
+            footer {
+                margin-top: 2rem !important;
             }
         }
     </style>
 </head>
 
-<body>
-    <div class="glow"></div>
+<body class="min-h-screen flex flex-col items-center justify-center p-4 sm:p-6 relative overflow-hidden">
 
-    <div class="container">
-        <h1 class="brand">AVANT</h1>
-        <p class="subtitle">Site em construção</p>
-        <p class="status"><span class="dot"></span>Engenharia Diagnóstica &amp; Mapeamento</p>
-        <p class="redirect-hint"><a href="/">← Voltar para links</a></p>
+    <!-- Background ambient glow -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/3 w-[600px] h-[600px] rounded-full pointer-events-none animate-pulse-glow"
+        style="background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 70%);">
     </div>
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[400px] h-[400px] rounded-full pointer-events-none"
+        style="background: radial-gradient(circle, rgba(255,255,255,0.02) 0%, transparent 70%);">
+    </div>
+
+    <main class="w-full max-w-md relative z-10 flex flex-col items-center">
+
+        <!-- Profile / Brand Header -->
+        <header class="brand-header text-center mb-8 sm:mb-12 opacity-0 animate-fade-in-up">
+            <!-- Brand Name - Michroma Font (hidden on mobile to avoid duplication with Google Sites header) -->
+            <h1 class="brand-title font-brand text-5xl tracking-widest mb-4">
+                <span class="text-white">AV</span><span style="color: #71717A;">ANT</span>
+            </h1>
+
+            <!-- Tagline -->
+            <p class="brand-tagline font-mono text-[10px] uppercase tracking-[0.25em] text-zinc-400">
+                Engenharia Diagnóstica & Mapeamento
+            </p>
+
+            <!-- Decorative line -->
+            <div class="section-divider w-16 mx-auto mt-4 sm:mt-6"></div>
+        </header>
+
+        <!-- Links Container -->
+        <div class="links-container w-full flex flex-col gap-3 sm:gap-3.5">
+
+            <!-- Link 1: WhatsApp -->
+            <a href="https://wa.me/5516997913988?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20da%20AVANT."
+                target="_blank" rel="noopener noreferrer"
+                class="link-card opacity-0 animate-fade-in-up delay-100 w-full bg-zinc-900/60 border border-zinc-800/80 rounded-2xl p-4 flex items-center justify-between group shadow-lg"
+                id="link-whatsapp">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="icon-box w-11 h-11 whatsapp-accent text-white rounded-xl flex items-center justify-center">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h2 class="font-sans font-semibold text-sm text-white">WhatsApp</h2>
+                        <p class="font-mono text-[10px] uppercase text-zinc-400 tracking-wider">Solicite um orçamento
+                        </p>
+                    </div>
+                </div>
+                <i data-lucide="chevron-right"
+                    class="w-4 h-4 text-zinc-600 group-hover:text-white group-hover:translate-x-1 transition-all"></i>
+            </a>
+
+            <!-- Link 2: Instagram -->
+            <a href="https://www.instagram.com/avant.eng" target="_blank" rel="noopener noreferrer"
+                class="link-card opacity-0 animate-fade-in-up delay-200 w-full bg-zinc-900/60 border border-zinc-800/80 rounded-2xl p-4 flex items-center justify-between group shadow-lg"
+                id="link-instagram">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="icon-box w-11 h-11 instagram-accent text-white rounded-xl flex items-center justify-center">
+                        <i data-lucide="instagram" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h2 class="font-sans font-semibold text-sm text-white">Instagram</h2>
+                        <p class="font-mono text-[10px] uppercase text-zinc-400 tracking-wider">@avant.eng</p>
+                    </div>
+                </div>
+                <i data-lucide="chevron-right"
+                    class="w-4 h-4 text-zinc-600 group-hover:text-white group-hover:translate-x-1 transition-all"></i>
+            </a>
+
+            <!-- Link 3: E-mail -->
+            <a href="mailto:contato@avant.eng.br"
+                class="link-card opacity-0 animate-fade-in-up delay-300 w-full bg-zinc-900/60 border border-zinc-800/80 rounded-2xl p-4 flex items-center justify-between group shadow-lg"
+                id="link-email">
+                <div class="flex items-center gap-4">
+                    <div class="icon-box w-11 h-11 email-accent text-white rounded-xl flex items-center justify-center">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h2 class="font-sans font-semibold text-sm text-white">E-mail</h2>
+                        <p class="font-mono text-[10px] uppercase text-zinc-400 tracking-wider">contato@avant.eng.br</p>
+                    </div>
+                </div>
+                <i data-lucide="chevron-right"
+                    class="w-4 h-4 text-zinc-600 group-hover:text-white group-hover:translate-x-1 transition-all"></i>
+            </a>
+
+            <!-- Link 4: Website Oficial -->
+            <a href="/landing"
+                class="link-card opacity-0 animate-fade-in-up delay-400 w-full bg-zinc-900/60 border border-zinc-800/80 rounded-2xl p-4 flex items-center justify-between group shadow-lg"
+                id="link-website">
+                <div class="flex items-center gap-4">
+                    <div class="icon-box w-11 h-11 website-accent rounded-xl flex items-center justify-center">
+                        <i data-lucide="globe" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h2 class="font-sans font-semibold text-sm text-white">Website Oficial</h2>
+                        <p class="font-mono text-[10px] uppercase text-zinc-400 tracking-wider">Em construção
+                        </p>
+                    </div>
+                </div>
+                <i data-lucide="chevron-right"
+                    class="w-4 h-4 text-zinc-600 group-hover:text-white group-hover:translate-x-1 transition-all"></i>
+            </a>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-16 text-center opacity-0 animate-fade-in-up delay-500">
+            <div class="flex items-center justify-center gap-2 mb-3">
+                <div class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse shadow-lg shadow-emerald-500/30">
+                </div>
+                <span class="font-mono text-[9px] uppercase tracking-[0.2em] text-zinc-400">Operacional</span>
+            </div>
+            <div class="section-divider w-12 mx-auto mb-3"></div>
+            <p class="font-mono text-[9px] uppercase tracking-[0.2em] text-zinc-600">
+                &copy; 2025 AVANT Engenharia
+            </p>
+            <div class="section-divider w-12 mx-auto mt-4 mb-4"></div>
+            <p class="font-mono text-[9px] tracking-wide text-zinc-600 leading-relaxed">
+                AVANT ENGENHARIA E SERVICOS LTDA<br>
+                CNPJ: 65.434.555/0001-97
+            </p>
+        </footer>
+
+    </main>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
 </body>
 
 </html>
